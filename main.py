@@ -31,10 +31,10 @@ for i in range(len(X)-1):
 
 max_count = max(set(predictions), key=predictions.count)
 for i in range(n_clusters):
-    print("Need {} more for {}".format(30 - predictions.count(i), i))
+    print("Cluster {} has {} observations".format(i, predictions.count(i)))
 
 plt.title("Number of Observations per Cluster")
-plt.hist(predictions)
+plt.hist(predictions, bins=n_clusters)
 plt.show()
 
 '''
